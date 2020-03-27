@@ -1,0 +1,15 @@
+#form-space {
+  display: flex;
+  justify-content: center;
+}
+
+#form {
+  background-color: $white;
+  border-radius: 5px;
+  padding: 30px;
+
+  p {
+    margin: 0px;
+    text-align: right;
+  }
+}

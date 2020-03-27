@@ -1,0 +1,43 @@
+.btn-card {
+  color: black;
+  background-color: $light-gray;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.btn-card:hover {
+  color: black;
+  background-color: $medium-gray;
+  text-decoration: none;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: gray;
+  text-decoration: none;
+}
+
+.add {
+  margin: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-main {
+  text-align: center;
+  width: 200px;
+  color: black;
+  background-color: $medium-gray;
+  border-radius: 5px;
+  padding: 5px 10px;
+  border-color: $medium-gray;
+}
+
+.btn-main:hover {
+  color: black;
+  background-color: white;
+  text-decoration: none;
+}

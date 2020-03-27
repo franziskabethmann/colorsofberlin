@@ -1,0 +1,32 @@
+.card {
+  width: 300px;
+  text-align: center;
+  margin-top: 40px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+  .card-img-top {
+    padding: 10px;
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+  }
+}
+
+#card-center {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card-show {
+  width: 500px;
+  text-align: center;
+  margin-top: 40px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+  .card-img-top {
+    padding: 10px;
+    height: 500px;
+    width: 500px;
+    object-fit: cover;
+  }
+}

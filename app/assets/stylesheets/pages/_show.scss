@@ -1,4 +1,9 @@
-#card-show-space {
+#picture-space {
   display: flex;
   justify-content: center;
+
+  p {
+    margin: 20px;
+    text-align: center;
+  }
 }

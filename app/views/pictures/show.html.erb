@@ -1,14 +1,19 @@
 <div class="container">
-<!--   <div class="col-md-6 col-lg-4"> -->
-    <div class="card-show">
-      <%= cl_image_tag @picture.photo, class: "card-img-top" %>
+  <div class="row" id="picture-space">
+
+    <div class="card-show" >
+      <%= cl_image_tag @picture.photo, class: "card-img-top", style: "background-image" %>
       <h3 class="card-title"><%= @picture.date %></h3>
       <h3 class="card-title"><%= @picture.address %></h3>
+      <div class="delete">
+        <%= link_to "✕", picture_path(@picture), method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
     </div>
-<!--   </div> -->
+
 
     <div class="container">
     <!--   <p><%#= link_to "+ Add Dose", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %></p>
      -->  <p><%= link_to "back to picture overview", pictures_path %></p>
     </div>
+  </div>
 </div>

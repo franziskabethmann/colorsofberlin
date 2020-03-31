@@ -30,14 +30,29 @@ a:hover {
   text-align: center;
   width: 200px;
   color: black;
-  background-color: $medium-gray;
+  background-color: white;
   border-radius: 5px;
   padding: 5px 10px;
-  border-color: $medium-gray;
 }
 
 .btn-main:hover {
   color: black;
-  background-color: white;
+  background-color: $medium-gray;
+  text-decoration: none;
+}
+
+.btn-main-form {
+  text-align: center;
+  width: 200px;
+  color: black;
+  background-color: $light-gray;
+  border-radius: 5px;
+  padding: 5px 10px;
+  border-color: white;
+}
+
+.btn-main-form:hover {
+  color: black;
+  background-color: $medium-gray;
   text-decoration: none;
 }

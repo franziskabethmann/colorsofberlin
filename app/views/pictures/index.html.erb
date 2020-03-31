@@ -1,23 +1,29 @@
 <div class="card-category">
   <h1>colors of berlin</h1>
 </div>
+
 <div class="container">
     <div class="row">
       <% @pictures.each do |picture| %>
         <div class="col-md-6 col-lg-4" id="card-center">
-          <div class="card">
-            <img src="<%= picture.photo %>" class="card-img-top" alt="..." style="background-image">
-            <div class="card-body">
-              <h5 class="card-title"><%= picture.date %></h5>
-              <h5 class="card-title"><%= picture.address %></h5>
-              <%= link_to "view picture", picture_path(picture), class: "btn-card" %>
-              <%= link_to "✗", picture_path(picture), method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to picture_path(picture) do %>
+            <div class="card">
+              <img src="<%= picture.photo %>" class="card-img-top" alt="..." style="background-image">
+              <div class="card-body">
+                <h5 class="card-title"><%= picture.date %></h5>
+                <h5 class="card-title"><%= picture.address %></h5>
+                <div class="delete">
+                  <%= link_to "✕", picture_path(picture), method: :delete, data: { confirm: 'Are you sure?' } %>
+                </div>
+              </div>
             </div>
-          </div>
+          <% end %>
         </div>
       <% end %>
     </div>
+
   <div class="add">
     <%= link_to "+ add a picture", new_picture_path, class: "btn-main"%>
   </div>
+
 </div>

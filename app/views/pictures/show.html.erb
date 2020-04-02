@@ -5,6 +5,17 @@
       <%= cl_image_tag @picture.photo, class: "card-img-top", style: "background-image" %>
       <h3 class="card-title"><%= @picture.date %></h3>
       <h3 class="card-title"><%= @picture.address %></h3>
+
+      <div class="colors">
+        <ul style= "list-style-type: none">
+          <% @picture.tags.each do |tag| %>
+            <li><%= tag.color.name %>
+              <%= link_to "✕", tag_path(tag), method: :delete, data: { confirm: 'Are you sure?' } %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+
       <div class="delete">
         <%= link_to "✕", picture_path(@picture), method: :delete, data: { confirm: 'Are you sure?' } %>
       </div>
@@ -12,8 +23,8 @@
 
 
     <div class="container">
-    <!--   <p><%#= link_to "+ Add Dose", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %></p>
-     -->  <p><%= link_to "back to picture overview", pictures_path %></p>
+      <p><%= link_to "+ add color", new_picture_tag_path(@picture), class: "btn-main-form" %></p>
+      <p><%= link_to "back to picture overview", pictures_path %></p>
     </div>
   </div>
 </div>
